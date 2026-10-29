@@ -1,0 +1,14 @@
+services:
+  ply:
+    build: .
+    container_name: ply
+    restart: unless-stopped
+    env_file:
+      - bot/.env
+    environment:
+      PLY_DATA_DIR: /data
+    volumes:
+      - ply-data:/data
+
+volumes:
+  ply-data:

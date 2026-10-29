@@ -1,0 +1,24 @@
+{
+  "name": "ply",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ply — Just apply, but customized. Discord application tickets with animated flows.",
+  "type": "module",
+  "workspaces": [
+    "shared",
+    "bot",
+    "dashboard"
+  ],
+  "scripts": {
+    "dev:bot": "npm --workspace @ply/bot run dev",
+    "dev:dashboard": "npm --workspace @ply/dashboard run dev",
+    "deploy": "npm --workspace @ply/bot run deploy",
+    "start": "npm --workspace @ply/bot run start",
+    "build": "npm --workspace @ply/dashboard run build",
+    "preview": "npm --workspace @ply/dashboard run preview",
+    "test": "node --test shared/test/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}
